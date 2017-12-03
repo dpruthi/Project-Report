@@ -1,11 +1,71 @@
-	\section{Introduction to Languages,IDE’s,Tools and Technologies used for Implementation}
+\section{Introduction to Languages,IDE’s,Tools and Technologies used for Implementation}
 	
-	Android provides a rich application framework that allows you to build innovative
+\subsection{Technologies used}
+
+\subsubsection{Firebase}
+
+Firebase helps you build better mobile apps and grow your business.
+
+Firebase is a mobile platform from Google offering a number of different features that you can pick ‘n mix from. Specifically, these features revolve around cloud services, allowing users to save and retrieve data to be accessed from any device or browser. This can be useful for such things as cloud messaging, hosting, crash reporting, notifications, analytics and even earning money through AdMob.
+
+It works with Android apps, iOS apps and web apps and best of all: it’s free!
+
+\begin{itemize}
+
+\item \textbf{Setting up a project}
+
+Before you can do anything with Firebase, you first need to create an account. You can do this over at firebase.google.com.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.20]{images/Pdf2.png}
+\caption{Firebase Console}
+\end{figure}
+
+ 
+
+\item \textbf{Firebase Products}
+
+\begin{itemize}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{images/Pdf1.png}
+\caption{Firebase Products}
+\end{figure}
+
+\item \textbf{Firebase Authentication}
+
+Firebase Authentication aims to make building secure authentication systems easy, while improving the sign-in and onboarding experience for end users. It provides an end-to-end identity solution, supporting email and password accounts, phone auth, and Google, Twitter, Facebook, and GitHub login, and more.
+
+Most apps need to know the identity of a user. Knowing a user's identity allows an app to securely save user data in the cloud and provide the same personalized experience across all of the user's devices.
+Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
+
+Firebase Authentication integrates tightly with other Firebase services, and it leverages industry standards like OAuth 2.0 and OpenID Connect, so it can be easily integrated with your custom backend.
+
+\item \textbf{Firebase Realtime Database}
+
+Store and sync data with our NoSQL cloud database. Data is synced across all clients in realtime, and remains available when your app goes offline.
+
+The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client. When you build cross-platform apps with our iOS, Android, and JavaScript SDKs, all of your clients share one Realtime Database instance and automatically receive updates with the newest data.
+
+
+\item \textbf{Cloud Storage}
+
+Cloud Storage is built for app developers who need to store and serve user-generated content, such as photos or videos.
+
+Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale. The Firebase SDKs for Cloud Storage add Google security to file uploads and downloads for your Firebase apps, regardless of network quality. You can use our SDKs to store images, audio, video, or other user-generated content. On the server, you can use Google Cloud Storage, to access the same files.
+	\end{itemize}
+	\end{itemize}
+	
+\subsubsection{Android}
+
+
+Android provides a rich application framework that allows you to build innovative
 apps and games for mobile devices in a Java language environment. The documents
 listed in the left navigation provide details about how to build apps using Android's
-various APIs.The various fundamental concepts about the Android app framework: 
+various APIs.The various fundamental concepts about the Android app framework:
 
-\subsection{Android}
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.38]{images/a1.jpg}
@@ -31,7 +91,9 @@ available as open source for developers to develop applications which can be
 further used for selling in android market. There are around 200000 applications
 developed for android with over 3 billion+ downloads. Android relies on Linux version 2.6 for core system services such as security, memory management, process management, network stack, and driver model. For software development, Android provides Android SDK (Software development kit).
 
-\subsection{Activity Lifecycle}
+\begin{itemize}
+
+\item \textbf{Activity Lifecycle}
 Activities in the system are managed as an activity stack. When a new activity
 is started, it is placed on the top of the stack and becomes the running activitythe previous activity always remains below it in the stack, and will not come to
 the foreground again until the new activity exits. An activity has essentially four
@@ -59,29 +121,17 @@ memory is needed elsewhere.
 If an activity is paused or stopped, the system can drop the activity from memory by either asking it to finish, or simply killing its process. When it is displayed again to the user, it must be completely restarted and restored to its previous state.
 
 
-\section{Libraries used in making this application}
+\item \textbf{Libraries used in making this application}
+
 \begin{itemize}
 	\item \textbf{Android Support Library}
 Android Support Library, Card View, Recycler View, Material : The application will
 follow Material design guidelines.
 
-
-\item \textbf{Realm}
-
-Library to use Realm ORM in the application. This will allow to save data in
-the database of the app and to retrieve, update and delete objects saved.\\
-
-\item \textbf{Willian Charts}
-Library to implement the graphics to show the statistics of the
-app. Statistics include Expenses per month, per week and comparison of expenses according
-to selected dates.
-
-
-
 \end{itemize}
 
+\item \textbf{Impliment UI for Each Activity and Fragment}
 
-\subsection{Impliment UI for Each Activity and Fragment }
 \begin{itemize}
 	\item UI for MainActivity
 \item UI for Expenses Activity
@@ -117,8 +167,12 @@ Picker to select dates to make the query.
 
 
 \end{itemize}
+\end{itemize}
 
-\subsection{Any other supporting Language}
+
+\subsection{Language used}
+\subsubsection{JAVA}
+
 Java is a platform-independent programming language used to create secure
 and robust application that may run on a single computer or may be distributed
 among servers and clients over a network.
