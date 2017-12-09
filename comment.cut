@@ -1,5 +1,5 @@
-\usepackage{lipsum}% http://ctan.org/pkg/lipsum
-\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\usepackage{lipsum}
+\usepackage{titletoc}
 \usepackage{lastpage}
 \usepackage{macro/macro}
 \usepackage{float}
@@ -8,9 +8,7 @@
 \usepackage{verbatim}
 \usepackage{scrextend}
 
-%\addtokomafont{labelinglabel}{\sffamily}
-%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage[Glenn]{fncychap}
-\lhead{\large\bfseries\ Pdf Society  }
-\usepackage[left=2.0cm, right=1.0cm, top=2.5cm, bottom=1.5cm]{geometry}
+\lhead{\large\bfseries\   }
+\usepackage[left=3.5cm, right=1.25cm, top=2.5cm, bottom=1.25cm]{geometry}
 \pagestyle{fancy}
