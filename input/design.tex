@@ -1,5 +1,5 @@
 
-\section{Function Oriented}
+\section{Object Oriented}
 
 Object-oriented design is the process of planning a system of interacting objects for the purpose of solving a software problem. It is one approach to software design. An object contains encapsulated data and procedures grouped together to represent an entity. The 'object interface' defines how the object can be interacted with. An object-oriented program is described by the interaction of these objects. Object-oriented design is the discipline of defining the objects and their interactions to solve a problem that was identified and documented during object-oriented analysis.
 
@@ -90,3 +90,70 @@ moment. The user will be able to erase and add from this view as seen in the Fig
 \fi
 
 \section{Detail Design}
+
+	\subsection{Registration}
+	When the user first launches the app he sees the splash screen, if he is not logged in then he will see the login screen, if he hasn't created any account yet then he will have to register first, After submitting details during registration he will recieve an email confirming his email account. On successful email confirmation, he can login in the app. \\
+	
+	\subsection{Home}
+	After Successful login, he will see the home screen, which is divided into 3 parts:
+	\begin{itemize}
+		\item \textbf{Recent Ebooks}:- This part shows ebooks of all the users around the world. We can search from tons of ebooks and can share or download them easily.
+		\item \textbf{My Ebooks}:- This part shows ebooks uploaded by the user currently logged in. He can delete his ebooks and can also upload, view or search his ebooks.
+		
+		\item \textbf{Navigation Drawer Menu}:- It is the main menu of the app. It opens by left swiping. It contains following options:
+		\begin{itemize}
+			\item \textbf{Categories}:- It shows 19 categories of ebooks to choose from. After selecting one, all ebooks of that category are shown to user.
+			
+			\item \textbf{Share}:- We can share our app instantly on whatsapp, or any sharing platform.
+			
+			\item \textbf{Feedback}:- User can give feedback of \appName \ app, which will send instant notification to all admins using this app.
+			
+			\item \textbf{Made By}:-  It shows the list of \appName \ app creators along with their name and email id's.
+			
+			\item \textbf{Log Out}:- By Clicking this user will get logged out from the app.
+		\end{itemize}
+	\end{itemize}
+
+\section{System Design}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.41]{images/Flow.jpg}
+	\caption{Flow Chart}
+\end{figure}
+
+
+\section{Database Design}
+
+	\subsection{ER Diagram}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.40]{images/erdiagram.jpg}
+		\caption{ER Diagram}
+	\end{figure}
+	
+	\subsection{Database Connection Controls and Strings}
+	The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client. When we build cross-platform apps with our iOS, Android, and JavaScript SDKs, all of our clients share one Realtime Database instance and automatically receive updates with the newest data. \\
+	
+	If we are using the latest version of Android Studio (version 2.2 or later), It is recommended using the Firebase Assistant to connect your app to Firebase. The Firebase Assistant can connect our existing project or create a new one for us and automatically install any necessary gradle dependencies.\\
+	
+	If we are using an older version of Android Studio or have a more complex project configuration, we can still manually add Firebase to our app.
+	
+		\subsubsection{Using the Firebase Assistant}
+		
+		To open the Firebase Assistant in Android Studio:
+		\begin{itemize}
+			\item Click Tools > Firebase to open the Assistant window.
+			\item Click to expand one of the listed features (for example, Analytics), then click the provided tutorial link (for example, Log an Analytics event).
+			\item Click the Connect to Firebase button to connect to Firebase and add the necessary code to your app.
+		\end{itemize}
+	
+		\subsubsection{Manually adding Firebase}
+		To add Firebase to your app you'll need a Firebase project and a Firebase configuration file for your app.
+		\begin{itemize}
+			\item Create a Firebase project in the Firebase console, if we don't already have one. If we already have an existing Google project associated with our mobile app, click Import Google Project. Otherwise, click Add project.
+			\item Click Add Firebase to our Android app and follow the setup steps. If we're importing an existing Google project, this may happen automatically and we can just download the config file.
+			\item When prompted, enter our app's package name. It's important to enter the package name our app is using, this can only be set when we add an app to our Firebase project.
+			\item At the end, we'll download a google-services.json file. We can download this file again at any time.
+		\end{itemize}
