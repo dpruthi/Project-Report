@@ -425,16 +425,225 @@ Like other programming style guides, the issues covered span not only aesthetic 
 
 	\section{GANTT chart
 }
-	\section{Testing Techniques and Test Plans
-}
-\subsection{xUnit Framework}
+	\section{Testing Techniques and Test Plans}
+	\subsection{Testing Techniques}
+	
+\subsubsection{xUnit Framework}
 xUnit is the collective name for several unit testing frameworks that derive their structure and functionality from Smalltalk's SUnit. SUnit, designed by Kent Beck in 1998, was written in a highly structured object-oriented style, which lent easily to contemporary languages such as Java and C. Following its introduction in Smalltalk the framework was ported to Java by Kent Beck and Erich Gamma and gained wide popularity, eventually gaining ground in the majority of programming languages in current use. The names of many of these frameworks are a variation on "SUnit", usually replacing the "S" with the first letter (or letters) in the name of their intended language ("JUnit" for Java, "RUnit" for R etc.). These frameworks and their common architecture are collectively known as "xUnit".
-\subsection{JUnit}
+\subsubsection{JUnit}
 JUnit is a unit testing framework for the Java programming language. JUnit has been important in the development of test-driven development, and is one of a family of unit testing frameworks which is collectively known as xUnit that originated with SUnit. JUnit is linked as a JAR at compile-time; the framework resides under package junit.framework for JUnit 3.8 and earlier, and under package org.junit for JUnit 4 and later. A research survey performed in 2013 across 10,000 Java projects hosted on GitHub found that JUnit, (in a tie with slf4j-api), was the most commonly included external library. Each library was used by 30.7 percentage of projects.
-\subsection{Robotium Android Testing Tool}
+\subsubsection{Robotium Android Testing Tool}
 Robotium is one the first and frequently utilized automated testing tools for software supported on Android. Robotium is a free Android UI testing tool. It is suitable for tests automation for different Android versions and sub-versions. Software developers often describe it as Selenium for Android. Tests created by Robotium are written in Java. In fact, Robotium is a library for unit tests.
 But it takes much time and efforts to create tests by means of Robotium, as one must work with the program source code in order to automate tests. The tool is also unsuitable for interaction with system software; it cannot lock and unlock a smartphone or a tablet. There is no Record and Play function in Robotium, and it does not provide screenshots.
-\subsection{MonkeyRunner Android App Testing}
+\subsubsection{MonkeyRunner Android App Testing}
 MonkeyRunner Android App Testing
 MonkeyRunner is one of popular Android Testing tools used for automating of functional tests for Android software. This tool is more low-level than Robotium is. One does not have to deal with the source code in order to automate tests. The tests are written in Python, one may use a recording tool for creating tests.
 MonkeyRunner can run tests on real devices connected to a PC or emulators. The tool has an API what allows it to control a smartphone, a tablet or an emulator from outside of Android code. A significant disadvantage of the mobile app testing tool is that it is necessary to write scripts for each device. Another problem of MonkeyRunner is that the tests require adjustments each time when user interface of the tested program is changed.
+
+\subsection{Test Plans}
+
+\subsubsection{Testing of login}
+
+\begin{center}
+\begin{tabular}{ | m{5em} | m{5cm}|} 
+\hline
+Test Id: & TC1   \\ 
+\hline
+Tester: & Admin  \\ 
+\hline
+Date: & 8-11-2017  \\ 
+\hline
+Purpose: & Login to system   \\ 
+\hline
+Pre-requisites: & Must fill login form   \\ 
+\hline
+Test Data: & Email, Password   \\ 
+\hline
+Steps: &  \\
+\hline  
+Step 1 &  Start Application \\ 
+Step 2 &  Login Activity will be displayed  \\ 
+Step 3 &  Enter password  \\ 
+Step 4 &  Click login  \\ 
+Step 5 &  If the email and password is correct Home Activity will appear  \\ 
+Step 6 &  If the username and password is not correct toast will appear \\
+\hline
+Status: & Pass   \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Testing of Uploading Pdf} 	
+
+ \begin{center}
+\begin{tabular}{ | m{5em} | m{5cm}|} 
+\hline
+Test Id: & TC2   \\ 
+\hline
+Tester: & Admin  \\ 
+\hline
+Date: & 12-11-2017  \\ 
+\hline
+Purpose: & Uploading Pdf to database   \\ 
+\hline
+Pre-requisites: & Must be login   \\ 
+\hline
+Test Data: & Email, Password, Any Pdf   \\ 
+\hline
+Steps: &  \\
+\hline  
+Step 1 &  Start Application \\ 
+Step 2 &  Login Activity will be displayed  \\ 
+Step 3 &  Enter password  \\ 
+Step 4 &  Click login  \\ 
+Step 5 &  Home Activity will appear  \\ 
+Step 6 &  Click on Fab button \\
+Step 7 &  Upload Activity open \\
+Step 8 &  Choose Pdf to be upload \\
+Step 9 &  Enter Description(if not added then error display) \\
+Step 10 &  Click on Upload button and it will be uploaded \\
+\hline
+Status: & Pass   \\ 
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsubsection{Testing of Retrieving Pdf database} 	
+
+ \begin{center}
+\begin{tabular}{ | m{5em} | m{5cm}|} 
+\hline
+Test Id: & TC3   \\ 
+\hline
+Tester: & Admin  \\ 
+\hline
+Date: & 25-11-2017  \\ 
+\hline
+Purpose: & Retrieving Pdf from database   \\ 
+\hline
+Pre-requisites: & Must be login and Pdf in database  \\ 
+\hline
+Test Data: & Email, Password, Any Pdf in database   \\ 
+\hline
+Steps: &  \\
+\hline  
+Step 1 &  Start Application \\ 
+Step 2 &  Login Activity will be displayed  \\ 
+Step 3 &  Enter password  \\ 
+Step 4 &  Click login  \\ 
+Step 5 &  Home Activity will appear and Pdf displayed in Fragment  \\ 
+\hline
+Status: & Pass   \\ 
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsubsection{Testing of Downloading Pdf} 	
+
+ \begin{center}
+\begin{tabular}{ | m{5em} | m{5cm}|} 
+\hline
+Test Id: & TC4   \\ 
+\hline
+Tester: & Admin  \\ 
+\hline
+Date: & 25-11-2017  \\ 
+\hline
+Purpose: & Downloading Pdf from database   \\ 
+\hline
+Pre-requisites: & Must be login and Pdf in database  \\ 
+\hline
+Test Data: & Email, Password, Pdf    \\ 
+\hline
+Steps: &  \\
+\hline  
+Step 1 &  Start Application \\ 
+Step 2 &  Login Activity will be displayed  \\ 
+Step 3 &  Enter password  \\ 
+Step 4 &  Click login  \\ 
+Step 5 &  Home Activity will appear  \\ 
+Step 6 &  Click on Pdf  \\
+Step 7 &  Pdf Detail Activity open \\
+Step 8 &  Click on Download button and it will be uploaded \\
+Step 9 &  Drag notification bar and open downloaded pdf \\ 
+\hline
+Status: & Pass   \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Testing of Uploading Pdf in particular category} 	
+
+ \begin{center}
+\begin{tabular}{ | m{5em} | m{5cm}|} 
+\hline
+Test Id: & TC5   \\ 
+\hline
+Tester: & Admin  \\ 
+\hline
+Date: & 25-11-2017  \\ 
+\hline
+Purpose: & Uploading Pdf into particular category   \\ 
+\hline
+Pre-requisites: & Must be login   \\ 
+\hline
+Test Data: & Email, Password, Any Pdf   \\ 
+\hline
+Steps: &  \\
+\hline  
+Step 1 &  Start Application \\ 
+Step 2 &  Login Activity will be displayed  \\ 
+Step 3 &  Enter password  \\ 
+Step 4 &  Click login  \\ 
+Step 5 &  Home Activity will appear  \\ 
+Step 6 &  Click on Fab button \\
+Step 7 &  Upload Activity open \\
+Step 8 &  Choose Pdf to be upload \\
+Step 8 &  Select category of Pdf \\
+Step 9 &  Enter Description(if not added then error display) \\
+Step 10 &  Click on Upload button and it will be uploaded in that category \\
+\hline
+Status: & Pass   \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Testing of sharing pdf to various app} 	
+
+ \begin{center}
+\begin{tabular}{ | m{5em} | m{5cm}|} 
+\hline
+Test Id: & TC6   \\ 
+\hline
+Tester: & Admin  \\ 
+\hline
+Date: & 25-11-2017  \\ 
+\hline
+Purpose: & Sharing pdf to various app   \\ 
+\hline
+Pre-requisites: & Must be login and pdf for sharing   \\ 
+\hline
+Test Data: & Email, Password, Any Pdf   \\ 
+\hline
+Steps: &  \\
+\hline  
+Step 1 &  Start Application \\ 
+Step 2 &  Login Activity will be displayed  \\ 
+Step 3 &  Enter password  \\ 
+Step 4 &  Click login  \\ 
+Step 5 &  Home Activity will appear  \\ 
+Step 6 &  Click on Pdf  \\
+Step 7 &  Pdf Detail Activity open \\
+Step 8 &  Select share icon from menu \\
+Step 9 &  Choose apps for sharing pdf \\
+\hline
+Status: & Pass   \\ 
+\hline
+\end{tabular}
+\end{center}
+ 
+ 
+ 
+ 
