@@ -11,6 +11,7 @@
 \usepackage{verbatim}
 \usepackage{scrextend}
 \usepackage{array}
+\usepackage{titlesec}
 
 \usepackage[Glenn]{fncychap}
 \lhead{\large\bfseries\   }
@@ -31,9 +32,32 @@
 
 \usepackage{listings}
 
-\newcommand{\studentName}{Deepak Pruthi}
-\newcommand{\studentRollNo}{1411248}
+\newcommand{\studentName}{Manpreet Singh}
+\newcommand{\studentRollNo}{1411281}
 \newcommand{\appName}{E-Club}
+
+\makeatletter
+\def\@makechapterhead#1{%
+	%%%%\vspace*{50\p@}% %%% removed!
+	{\parindent \z@ \raggedright \normalfont
+		\ifnum \c@secnumdepth >\m@ne
+		\huge\bfseries 	\@chapapp\space \thechapter
+		\par\nobreak
+		\vskip 20\p@
+		\fi
+		\interlinepenalty\@M
+		\Huge \bfseries #1\par\nobreak
+		\vskip 40\p@
+}}
+\def\@makeschapterhead#1{%
+	%%%%%\vspace*{50\p@}% %%% removed!
+	{\parindent \z@ \raggedright
+		\normalfont
+		\interlinepenalty\@M
+		\Huge \bfseries  #1\par\nobreak
+		\vskip 40\p@
+}}
+\makeatother
 
 \begin{document}
 \input{input/titlepage.tex}
@@ -71,9 +95,12 @@
 \cfoot{\thepage}
 
 \newpage
+%\newgeometry{textwidth=16cm,textheight=28cm,voffset=-2cm,bottom=0cm}
 \chapter{Introduction}
+
 \input{input/organisation.tex}
 \newpage
+
 \chapter{Requirement Analysis and System Specification}
 \input{input/System.tex}
 

@@ -8,6 +8,7 @@
 \usepackage{verbatim}
 \usepackage{scrextend}
 \usepackage{array}
+\usepackage{titlesec}
 
 \usepackage[Glenn]{fncychap}
 \lhead{\large\bfseries\   }
